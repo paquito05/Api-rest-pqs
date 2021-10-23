@@ -7,7 +7,7 @@ var ProductoSchema = Schema({
     nombre: String,
     tipo_producto: String,
     descripcion: String,
-    precio: Float32Array,
+    precio: String,
     imagen: String,
     estado: String,
     empresa: { type: Schema.ObjectId, ref: 'Empresa' }

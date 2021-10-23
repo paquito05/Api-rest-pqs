@@ -21,15 +21,15 @@ function crearUsuario(req, res) {
     var params = req.body;
     var usuario = new Usuario();
 
-    if (params.nombre && params.apellido && params.nickname && params.email && params.password && params.telefono && params.direccion) {
+    if (params.nombre && params.apellido && params.nickname && params.email && params.password ) {
 
         usuario.nombre = params.nombre;
         usuario.apellido = params.apellido;
         usuario.nickname = params.nickname;
         usuario.email = params.email;
-        usuario.telefono = params.telefono;
-        usuario.direccion = params.direccion;
-        usuario.role = 'ROLE_USER';
+        usuario.telefono = null;
+        usuario.direccion = null;
+        usuario.role = params.role;
         usuario.imagen = null;
         usuario.estado = '1';
 
